@@ -1,0 +1,118 @@
+/* Navbar Container */
+.nav-bar {
+  position: fixed;
+  left: 0;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* Navigation Items */
+.nav-bar ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  padding: 0px 30px;
+  border-radius: 20px;
+  list-style: none;
+  pointer-events: auto;
+  position: relative;
+  max-width: 90%;
+  width: fit-content;
+  gap: 20px;
+}
+
+/* Logo in Center */
+.logo-center {
+  position: absolute;
+  bottom: 80%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background: black;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  z-index: 2;
+}
+
+.logo-center img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Nav Items */
+.nav-bar li a {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 0px 20px;
+  display: block;
+  transform: none !important;
+
+}
+
+.nav-bar li {
+  padding: 0;
+  list-style: none;
+  transform: none !important;
+
+}
+
+/* Responsive Tablet */
+@media screen and (max-width: 768px) {
+  .nav-bar ul {
+    gap: 16px;
+    padding: 10px 15px;
+  }
+
+  .nav-bar li a {
+    font-size: 14px;
+    padding: 4px 10px;
+  }
+
+  .logo-center {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo-center img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Responsive Mobile */
+@media screen and (max-width: 480px) {
+  .nav-bar ul {
+    gap: 10px;
+    padding: 8px 10px;
+    max-width: 95%;
+  }
+
+  .nav-bar li a {
+    font-size: 12px;
+    padding: 2px 6px;
+  }
+
+  .logo-center {
+    width: 34px;
+    height: 34px;
+  }
+
+  .logo-center img {
+    width: 30px;
+    height: 30px;
+  }
+}

@@ -1,0 +1,185 @@
+.hero {
+    position: relative;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(250, 235, 215, 0.774), rgba(49, 49, 49, 0.733)), 
+        url('../assets/bg.png') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+  
+    /* For all browsers */
+    -webkit-mask-image: url('../assets/border-mask.png');
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+  
+    mask-image: url('../assets/border-mask.png');
+    mask-size: 1500px 950px;  /* or try: 95% 95% for slightly smaller */
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+  
+  
+  .overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+
+  .logo{
+    width: 50%;
+  }
+  
+  .logo img {
+    width: 500px;
+    height: 150px;
+    margin-bottom: 30px;
+    margin-top: 250px;
+    margin-left: 150px;
+  }
+  
+  .photos {
+
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin-top: 120px;
+    height: 300px;
+    perspective: 1000px;
+    font-size: 0;
+
+  }
+  
+  .photos img {
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+    font-size: initial; 
+    -webkit-mask-image: url('../assets/ripped-mask.png');
+    -webkit-mask-size: 90% 90%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+  
+    mask-image: url('../assets/ripped-mask.png');
+    mask-size: 90% 90%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  
+    /* Optional style enhancements */
+    border: 2px solid #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.959);
+  }
+  
+  .ripped1{
+    transform: scaleX(-1);
+
+    margin-left: 200px;
+    margin-top: 150px;
+    transform: rotateX(-25deg) rotateY(45deg) scale(1.1);
+  }
+  .ripped2{
+    transform: scaleX(-1);
+
+    margin-bottom: 200px;
+    transform: rotateX(15deg) rotateY(40deg) scale(1);
+
+  }
+
+
+
+
+
+
+  @media screen and (max-width: 768px) {
+    .hero {
+      height: 100vh;
+      background-position: center;
+      mask-size: contain;
+      -webkit-mask-size: contain;
+
+      -webkit-mask-image: url('../assets/border-mask.png');
+      -webkit-mask-size: 100% 100%;
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+    
+      mask-image: url('../assets/border-mask.png');
+      mask-size: 800px 120vh;  /* or try: 95% 95% for slightly smaller */
+      mask-repeat: no-repeat;
+      mask-position: center;
+    }
+  
+    .overlay {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .logo {
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+    }
+  
+    .logo img {
+      width: 80%;
+      height: auto;
+      margin: 10px auto 20px;
+    }
+  
+    .photos {
+      margin-top: 0;
+      padding-top: 100px;
+      height: auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+  
+    .photos img {
+      width: 150px;
+      height: 100px;
+      margin: 20px ;
+      mask-size: 100% 100%;
+      -webkit-mask-size: 100% 100%;
+    }
+  
+    .ripped1,
+    .ripped2 {
+      transform: none;
+      margin: 0 !important;
+
+    }
+
+    .ripped1{
+      transform: scaleX(-1);
+  
+      transform: rotateX(45deg) rotateY(45deg) scale(1.5);
+    }
+    .ripped2{
+      transform: scaleX(-1);
+      transform: rotateX(35deg) rotateY(-25deg) scale(1.5);
+  
+    }
+  
+  }
+  
+  @media screen and (max-width: 480px) {
+    .logo img {
+      width: 90%;
+    }
+  
+    .photos img {
+      width: 130px;
+      height: 90px;
+    }
+  }
+  
+  
+
+
+  

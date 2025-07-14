@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* DesignWordsImage.css */
+.design-image-wrapper {
+  margin-top: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px ;
+}
+
+.design-image {
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+  object-fit: contain;
+  
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .design-image {
+    max-width: 1000px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .design-image {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .design-image {
+    max-width: 95%;
+  }
+}
